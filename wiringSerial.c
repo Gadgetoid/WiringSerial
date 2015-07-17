@@ -89,6 +89,7 @@ int serialOpen (const char *device, const int baud)
     options.c_cflag &= ~PARENB ;
     options.c_cflag &= ~CSTOPB ;
     options.c_cflag &= ~CSIZE ;
+	options.c_cflag &= ~TIOCM_DTR;
     options.c_cflag |= CS8 ;
 	options.c_cflag &= ~CRTSCTS;
     options.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG) ;
